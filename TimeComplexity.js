@@ -41,3 +41,22 @@ function subtotals(array) {
     }
     return subtotalArray;
 }
+//Time Complexity: O(n^2)
+
+function vowelCount(str) {
+    let vowelCount = {};
+    const vowels = "aeiouAEIOU";
+
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            if (char in vowelCount) {
+                vowelCount[char] += 1;
+            } else {
+                vowelCount[char] = 1;
+            }
+        }
+    }
+
+    return vowelCount;
+}
+//Time Complexity: O(n)
